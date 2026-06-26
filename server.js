@@ -11,6 +11,9 @@ app.use(express.json());
 dbConnect();
 
 app.use("/students", studentRouter);
+app.get("/", (req, res) => {
+  res.send("hiii");
+});
 
 app.listen(process.env.PORT, () => {
   console.log("server is running");
